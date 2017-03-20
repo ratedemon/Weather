@@ -1,0 +1,101 @@
+:root{
+	--main-background: rgb(255, 77, 71);
+	--main-color: white;
+	--spacing: 1em;
+}
+body{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	background-color: var(--main-background);
+	background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+	color: var(--main-color);
+	height: 100vh;
+	transition: all 1s ease-in-out;
+}
+.weather{
+	display: block;
+	margin: auto;
+	text-transform: uppercase;
+}
+.weather__main{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	flex: 2;
+}
+.country__city{
+	font-size: 3.5em;
+	border-right: 2px solid var(--main-color);
+	padding: 0 var(--spacing);
+}
+.main__temp, .main__main{
+	padding: 0 calc(var(--spacing)/2);
+	margin: 1% 0;
+	font-size: 3em;
+	font-weight: 400;
+}
+.country__name{
+	padding: 0 calc(var(--spacing)/2);
+	font-size: 3.5em;
+}
+.main__description{
+	font-size: 1.5em;
+}
+.main__osn, .main__description, .main__icon{
+	flex: 1;
+}
+.main__osn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.weather__country{
+	display: flex;
+	justify-content: center;
+	flex: 1 0 auto;
+}
+.wi{
+	font-size: 12em;
+}
+.main__icon{
+	flex: 10;
+	margin: 3em 0 0;
+}
+.main__temp{
+
+}
+.main__temp:after{
+	content: "°";
+}
+.btn{
+	padding: calc(var(--spacing)/2) var(--spacing);
+	color: var(--main-background);
+	display: block;
+	font-size: 2.5em;
+	background: var(--main-color);
+	margin: 3% auto 1.5%;
+	border-radius: 2em;
+}
+.btn:focus{
+	outline: none;
+}
+@media only screen and (max-width: 52em){
+	.wi{
+	font-size: 10em;
+	}
+	.country__city, .country__name{
+		font-size: 2.2em;
+	}
+	.btn{
+		font-size: 2em;
+		padding: calc(var(--spacing)/3) calc(var(--spacing)/2);
+		margin: 10% auto 4%;
+	}
+	.main__temp, .main__main{{
+
+	}
+}
